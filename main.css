@@ -4,6 +4,76 @@ body{
     padding-left: 150px;
     padding-right: 150px;
 }
+@media (min-width: 1536px) {
+
+    .container{
+        max-width: 1536px;
+    }
+
+    .tokenomics-container {
+        max-width: 1536px;
+    }
+}
+  
+  /* Для планшетов в альбомной ориентации и маленьких настольных экранов */
+@media (min-width: 1280px) {
+    .container{
+        max-width: 1280px;
+    }
+
+    .tokenomics-container {
+        max-width: 1280px;
+    }
+    /* стили */
+}
+  
+  /* Для планшетов в портретной ориентации */
+@media (min-width: 1024px){
+    .container{
+        max-width: 1024px;
+    }
+
+    .tokenomics-container {
+        max-width: 1024px;
+    }
+    /* стили */
+}
+  
+  /* Для больших мобильных устройств */
+@media (min-width: 768px) {
+    \.container{
+        max-width: 768px;
+    }
+
+    .tokenomics-container {
+        max-width: 768px;
+    }
+    /* стили */
+}
+  
+  /* Для мобильных устройств */
+@media (min-width: 640px) {
+    .container{
+        max-width: 640px;
+    }
+
+    .tokenomics-container {
+        max-width: 640px;
+    }
+    /* стили */
+}
+  
+  /* Для маленьких мобильных устройств */
+@media (max-width: 479px) {
+    .container{
+        max-width: 479px;
+    }
+
+    .tokenomics-container {
+        max-width: 479px;
+    }
+    /* стили */
+}
 
 * {
     box-sizing: border-box;
@@ -128,6 +198,7 @@ section.intro h1 {
     font-weight: 700;
     line-height: normal;
     margin-bottom: 9px;
+    margin-right: 5px;
 }
 
 
@@ -194,10 +265,11 @@ section.link_swip{
 
 .container {
     margin: 0 auto;
-    max-width: 1540px;
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: 1276px;
+    padding-left: 0 15px;
+    width: 100%;
 }
+
 
 
 .partners, .partners__list{
@@ -417,12 +489,11 @@ section.features{
     margin-bottom: 100px;
 }
 
-section.features .container{
-    position: relative;
-    text-align: center; /* Center text and inline content */
-    justify-content: center; /* Horizontally center child content */
-    align-items: center; /* Vertically center (if needed) */
-    flex-direction: column; /* Stack children vertically */
+section.features .container {
+    display: flex;
+    flex-direction: column; /* Элементы выстраиваются вертикально */
+    align-items: center; /* Горизонтальное выравнивание */
+    justify-content: center; /* Вертикальное выравнивание, если у элементов есть дополнительное пространство */
 }
 
 
@@ -446,7 +517,6 @@ section.features .features__title{
     height: 300px; /* Fixed height for container */
     align-items: center;
     text-align: center;
-    margin-left: 25%;
 }
 
 #image1, #image2 {
@@ -460,12 +530,9 @@ section.features .features__title{
     opacity: 0;
 }
 
-#image1{
-    margin-left: -50px;
-}
 
 #image1.show, #image2.show {
-    transform: translateX(0);
+    transform: translateX(50%);
     opacity: 1;
 }
 
@@ -500,9 +567,12 @@ section.calc{
 }
 
 .tokenomics-container {
+    margin: 0 auto;
+    max-width: 1276px;
+    padding: 0 15px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
     font-family: 'Arial', sans-serif;
 }
 
