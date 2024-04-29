@@ -51,5 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var mobileBtn = document.querySelector('.mobile-btn');
+    var headerLinks = document.querySelector('.header__links');
+    var iconDefault = document.querySelector('.mobile-btn .default');
+    var iconClose = document.querySelector('.mobile-btn .close');
+
+    mobileBtn.addEventListener('click', function() {
+        headerLinks.classList.toggle('active');
+        iconDefault.style.display = headerLinks.classList.contains('active') ? 'none' : 'block';
+        iconClose.style.display = headerLinks.classList.contains('active') ? 'block' : 'none';
+    });
+});
+
+
 
 

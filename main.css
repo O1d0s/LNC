@@ -1,8 +1,6 @@
 body{
     overflow-x: hidden;
     background-color: rgb(59, 133, 75);
-    padding-left: 150px;
-    padding-right: 150px;
 }
 @media (min-width: 1536px) {
 
@@ -73,6 +71,22 @@ body{
         max-width: 479px;
     }
     /* стили */
+}
+
+@media screen and (max-width: 500px){
+
+    section.about .container{
+        flex-wrap: wrap;
+    }
+
+    section.base .container{
+        flex-wrap: wrap;
+    }
+
+    section.social .container{
+        flex-wrap: wrap;
+    }
+    
 }
 
 * {
@@ -266,7 +280,7 @@ section.link_swip{
 .container {
     margin: 0 auto;
     max-width: 1276px;
-    padding-left: 0 15px;
+    padding: 0 15px;
     width: 100%;
 }
 
@@ -528,12 +542,23 @@ section.features .features__title{
     transition: opacity 0.5s ease, transform 0.5s ease;
     transform: translateX(-100%); /* start offscreen by default */
     opacity: 0;
+
+    @media screen and (max-width: 500px) {
+        margin-top: 50px;
+        height: 220px;
+        width: 100%;
+    }
+   
 }
 
 
 #image1.show, #image2.show {
     transform: translateX(50%);
     opacity: 1;
+
+    @media screen and (max-width: 500px) {
+        transform: translateX(0);
+    }
 }
 
 #image1.hidden, #image2.hidden {
@@ -619,6 +644,12 @@ li::before {
     .blockchain, .token-allocation {
         width: 100%;
     }
+
+    .token-allocation{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    
 }
 
 
@@ -698,6 +729,11 @@ section.why-choose .why-choose__grid{
     align-items: flex-start;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+
+    @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
 }
 
 section.why-choose .why-choose__grid .grid__block{
@@ -716,14 +752,26 @@ section.why-choose .why-choose__grid .grid__block{
 
 section.why-choose .why-choose__grid .grid__block:nth-child(2){
     margin-top: 131px;
+
+    @media screen and (max-width: 500px) {
+        margin-top: 50px;
+    }
 }
 
 section.why-choose .why-choose__grid .grid__block:nth-child(3){
     margin-top: 320px;
+
+    @media screen and (max-width: 500px) {
+        margin-top: 50px;
+    }
 }
 
 section.why-choose .why-choose__grid .grid__block:nth-child(4){
     margin-top: 83px;
+
+    @media screen and (max-width: 500px) {
+        margin-top: 50px;
+    }
 }
 
 section.faq{
